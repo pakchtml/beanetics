@@ -12,7 +12,6 @@ const Item = ({id, title, region, image, price}) => {
          <h3>{title}</h3>
          <p className="region"><small>region:</small> {region}</p>
          <div className="imgbox">
-            {/* <img src={url} alt={title}/> */}
             <img src={image} alt={title}/>
          </div>
          <div className="info">
