@@ -16,7 +16,7 @@ const Home = () => {
             py="6rem"
          >
             <p>Come taste the evolution of coffee. We are a small roaster located in a small town of Northern Virginia and we love what we do! Come enjoy our coffee at home or in our community.</p>
-            <Link to="/events" className="bttn">Upcoming Events</Link>
+            <Link to="/shop" className="bttn">Our Shop</Link>
          </Hero>
          <div className="main-contain">
             <div className="text-content">

@@ -44,7 +44,9 @@ const SHOP = styled.div`
       }
    }
 .shop-products{
-   max-width:1200px;margin:0 auto;
+   max-width:1200px;
+   margin:0 auto;
+   padding:3rem 0;
    display:grid;grid-template-columns:1fr 1fr 1fr;grid-gap:1rem;
    @media(max-width:849px){grid-template-columns:1fr 1fr;}
    @media(max-width:629px){grid-template-columns:1fr;}

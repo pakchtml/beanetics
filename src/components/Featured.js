@@ -23,10 +23,10 @@ const Featured = ({...props}) => {
                      <div className="imgbox">
                         <img src={itm.image} alt={itm.title}/>
                      </div>
-                     <p>${itm.price}</p>
+                     {/* <p>${itm.price}</p> */}
                      <div className="bttns">
-                        <Link to={`/shop/${itm.id}`}>details</Link>
-                        <button onClick={() => addToCart(itm)}>add to cart</button>
+                        <Link className="details" to={`/shop/${itm.id}`}>details</Link>
+                        <button className="addto" onClick={() => addToCart(itm)}>add to cart</button>
                      </div>
                   </div>
                ))
@@ -50,6 +50,7 @@ const FEATURED = styled.div`
          grid-template-columns:1fr 1fr 1fr;
          grid-gap:1rem;
          @media(max-width:1199px){margin-left:10px;margin-right:10px;}
+         @media(max-width:650px){grid-template-columns:1fr;}
       }
       &-item{
          /* border:5px solid var(--pri-blue); */
@@ -58,6 +59,9 @@ const FEATURED = styled.div`
             font-family: 'Dancing Script', cursive;
             font-size:1.75rem;
             margin-bottom:.5rem;
+            @media(max-width:745px){
+               font-size:1.5rem;
+            }
          }
          .imgbox{
             width:100%;
@@ -71,7 +75,7 @@ const FEATURED = styled.div`
          }
          .bttns{
             display:flex;
-            justify-content:space-between;
+            justify-content:flex-end;
          }
       }
       &-heading{
@@ -81,5 +85,19 @@ const FEATURED = styled.div`
          margin-bottom:2rem;
          .icon{font-size:2rem;line-height:2rem;}
       }
+   }
+   .details{
+      text-decoration:none;
+      background-color:var(--offwhite);
+      color:var(--maroon);
+      border:none;
+      padding:.5rem 1rem;
+   }
+   .addto{
+      background-color:var(--orange);
+      color:var(--white);
+      border:none;
+      padding:.5rem 1rem;
+      margin-left:.5rem;
    }
 `;
